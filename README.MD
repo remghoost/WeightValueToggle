@@ -8,7 +8,7 @@ You can also show both at the same time with F8, if you so desire.
 <h2>Installation</h2>
 
 0. **BACK UP YOUR SAVE FILE.**
-1. [Download WeightValueToggle.zip from the releases on the right.](https://github.com/remghoost/WeightValueToggle/releases/tag/0.0.1)
+1. [Download WeightValueToggle.zip from the releases on the right.](https://github.com/remghoost/WeightValueToggle/releases/)
 2. Extract the mod files in modding directory.  
 Usually `%USERPROFILE%\AppData\LocalLow\Freehold Games\CavesOfQud\Mods`
 3. Make sure you have `Allow scripting mods` enabled in the Options (under Mods).
