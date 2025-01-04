@@ -4,7 +4,7 @@ A mod to toggle the display of weight or value in chests / trade windows using t
 
 --- 
 
-<h3>Installation</h3>
+<div style="font-size: 24px; font-weight: bold;">Installation</div>
 
 0. **BACK UP YOUR SAVE FILE.**
 1. Download from the releases on the right.
@@ -12,16 +12,14 @@ A mod to toggle the display of weight or value in chests / trade windows using t
 Usually `%USERPROFILE%\AppData\LocalLow\Freehold Games\CavesOfQud\Mods`
 3. Make sure you have `Allow scripting mods` enabled in the Options (under Mods).
 
----
 
-<h3>Possible bugs</h3>
+<div style="font-size: 24px; font-weight: bold;">Possible bugs</div>
 
 - Cursor gets stuck on the top bar of the trade window.  
 Just mouse over the screen. Usually a restart fixes this bug all together.
 
----
 
-<h3>Other</h3>
+<div style="font-size: 24px; font-weight: bold;">Other</div>
 
 **This mod is pretty messy.**  
 I'm hooking into the `Qud.UI` library and listening for the hotkey on every UI update. This can (and probably will) cause *some* amount of lag, but yeah.
@@ -32,24 +30,23 @@ The modding documentation for implementing in-game hotkeys did not work for me (
 
 ---
 
-<h3>Contributions</h3>
+
+<div style="font-size: 24px; font-weight: bold;">Contributions</div>
 
 **Pull requests welcomed.**  
 - `git clone` this repo
 - Generate your `Mods.csproj` from the `Modding Toolkit` menu on the left of the title screen.
 - Place that into this repo.
 
----
 
-<h3>todo</h3>
+<div style="font-size: 24px; font-weight: bold;">todo</div>
 
 - Not use Harmony patches. lmao.
 - Make mod look pretty and upload to Steam Workshop.
 - Force the trade/chest UI window to refresh on hotkey press.
 
----
 
-<h3>Shoutouts</h3>
+<div style="font-size: 24px; font-weight: bold;">Shoutouts</div>
 
 - Mistral-Large-Instruct-2407
 - Cline + VSCODE  
