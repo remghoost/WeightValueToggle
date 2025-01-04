@@ -20,6 +20,7 @@ Usually `%USERPROFILE%\AppData\LocalLow\Freehold Games\CavesOfQud\Mods`
 Just mouse over the screen. Usually a restart fixes this bug all together.
 
 - If you run into anything else, please submit an issue.
+- ALWAYS BACK UP YOUR SAVE FILE WHEN ADDING NEW MODS.
 
 
 <h2>Other</h2>
