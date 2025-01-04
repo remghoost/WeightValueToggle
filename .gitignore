@@ -1,4 +1,5 @@
 /bin/
 /obj/
+/releases/
 Mods.csproj
 WeightValueToggle.sln
