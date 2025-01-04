@@ -1,0 +1,7 @@
+{
+    "title": "WeightValueToggle",
+    "description": "A mod to toggle trade line weight and value with F7.",
+    "version": "1.0.0",
+    "author": "remghoost",
+    "dll": "WeightValueToggle.dll"
+}
