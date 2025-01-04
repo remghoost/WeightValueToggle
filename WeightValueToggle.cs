@@ -8,6 +8,7 @@ using XRL.UI.Framework;
 public class TradeDisplayToggle : MonoBehaviour
 {
     public static bool ShowValue = true; // Shared toggle state for trade display
+    public static bool ShowBoth = false; // Shared toggle state for displaying both weight and value
 }
 
 [HarmonyPatch(typeof(TradeLine), "setData")]
@@ -20,16 +21,33 @@ public static class TradeLineSetDataPatch
         {
             if (__instance.rightFloatText != null)
             {
-                if (TradeDisplayToggle.ShowValue)
+                if (TradeDisplayToggle.ShowBoth)
+                {
+                    // Display both Item Weight and Value
+                    if (tradeLineData.go != null)
+                    {
+                        string valueStr = string.Format("{0:0.00}",
+                        TradeUI.GetValue(tradeLineData.go, new bool?(tradeLineData.traderInventory)));
+                        string weightStr = string.Format("[{0} lbs.]", tradeLineData.go.Weight);
+
+                        if (tradeLineData.go.IsCurrency)
+                            __instance.rightFloatText.SetText(weightStr + " [{{W|$" + valueStr + "}}]");
+                        else
+                            __instance.rightFloatText.SetText(weightStr + " [$" + valueStr + "]");
+                    }
+                    else
+                    {
+                        __instance.rightFloatText.SetText("[N/A]");
+                    }
+                }
+                else if (TradeDisplayToggle.ShowValue)
                 {
                     // Display Item Value
                     if (tradeLineData.go != null)
                     {
                         string valueStr = string.Format("{0:0.00}",
-
                         TradeUI.GetValue(tradeLineData.go, new bool?(tradeLineData.traderInventory)));
-                        //UnityEngine.Debug.LogError("Displaying Trade Value: " + valueStr);
-                        
+
                         if (tradeLineData.go.IsCurrency)
                             __instance.rightFloatText.SetText("[{{W|$" + valueStr + "}}]");
                         else
@@ -46,13 +64,11 @@ public static class TradeLineSetDataPatch
                     if (tradeLineData.go != null)
                     {
                         string weightStr = string.Format("[{0} lbs.]", tradeLineData.go.Weight);
-                        //UnityEngine.Debug.LogError("Displaying Item Weight: " + weightStr);
-                        
+
                         __instance.rightFloatText.SetText(weightStr);
                     }
                     else
                     {
-                        // Just in case things wig out so we don't crash.
                         __instance.rightFloatText.SetText("[N/A]");
                     }
                 }
@@ -70,11 +86,28 @@ public static class HotkeyPatch
         if (Input.GetKeyDown(KeyCode.F7))
         {
             TradeDisplayToggle.ShowValue = !TradeDisplayToggle.ShowValue;
+            TradeDisplayToggle.ShowBoth = false; // Reset ShowBoth when F7 is pressed
             //UnityEngine.Debug.LogError("Hotkey F7 pressed. Toggled ShowValue to: " + TradeDisplayToggle.ShowValue);
 
             if (TradeDisplayToggle.ShowValue)
             {
                 XRL.Messages.MessageQueue.AddPlayerMessage("Showing currency");
+            }
+            else
+            {
+                XRL.Messages.MessageQueue.AddPlayerMessage("Showing weight");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F8))
+        {
+            TradeDisplayToggle.ShowBoth = !TradeDisplayToggle.ShowBoth;
+            TradeDisplayToggle.ShowValue = false; // Reset ShowValue when F8 is pressed
+            //UnityEngine.Debug.LogError("Hotkey F8 pressed. Toggled ShowBoth to: " + TradeDisplayToggle.ShowBoth);
+
+            if (TradeDisplayToggle.ShowBoth)
+            {
+                XRL.Messages.MessageQueue.AddPlayerMessage("Showing both weight and value");
             }
             else
             {
