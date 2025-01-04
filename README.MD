@@ -4,7 +4,8 @@ A mod to toggle the display of weight or value in chests / trade windows using t
 
 --- 
 
-## Installation
+<h2>Installation</h2>
+
 0. **BACK UP YOUR SAVE FILE.**
 1. Download from the releases on the right.
 2. Place the mod files in modding directory.  
@@ -13,11 +14,13 @@ Usually `%USERPROFILE%\AppData\LocalLow\Freehold Games\CavesOfQud\Mods`
 
 ---
 
-## Possible bugs
+<h2>Possible bugs</h2>
+
 - Cursor gets stuck on the top bar of the trade window.  
 Just mouse over the screen. Usually a restart fixes this bug all together.
 
-## Other
+<h2>Other</h2>
+
 **This mod is pretty messy.**  
 I'm hooking into the `Qud.UI` library and listening for the hotkey on every UI update. This can (and probably will) cause *some* amount of lag, but yeah.
 
@@ -27,18 +30,21 @@ The modding documentation for implementing in-game hotkeys did not work for me (
 
 ---
 
-## Contributions
+<h2>Contributions</h2>
+
 **Pull requests welcomed.**  
 - `git clone` this repo
 - Generate your `Mods.csproj` from the `Modding Toolkit` menu on the left of the title screen.
 - Place that into this repo.
 
-## todo
+<h2>todo</h2>
+
 - Not use Harmony patches. lmao.
 - Make mod look pretty and upload to Steam Workshop.
 - Force the trade/chest UI window to refresh on hotkey press.
 
-### Shoutouts
+<h3>Shoutouts</h3>
+
 - Mistral-Large-Instruct-2407
 - Cline + VSCODE  
 
