@@ -13,13 +13,13 @@ Usually `%USERPROFILE%\AppData\LocalLow\Freehold Games\CavesOfQud\Mods`
 3. Make sure you have `Allow scripting mods` enabled in the Options (under Mods).
 
 
-<div style="font-size: 24px; font-weight: bold;">Possible bugs</div>
+<h3>Possible bugs</h3>
 
 - Cursor gets stuck on the top bar of the trade window.  
 Just mouse over the screen. Usually a restart fixes this bug all together.
 
 
-<div style="font-size: 24px; font-weight: bold;">Other</div>
+<h3>Other</h3>
 
 **This mod is pretty messy.**  
 I'm hooking into the `Qud.UI` library and listening for the hotkey on every UI update. This can (and probably will) cause *some* amount of lag, but yeah.
@@ -31,7 +31,7 @@ The modding documentation for implementing in-game hotkeys did not work for me (
 ---
 
 
-<div style="font-size: 24px; font-weight: bold;">Contributions</div>
+<h3>Contributions</h3>
 
 **Pull requests welcomed.**  
 - `git clone` this repo
@@ -39,14 +39,14 @@ The modding documentation for implementing in-game hotkeys did not work for me (
 - Place that into this repo.
 
 
-<div style="font-size: 24px; font-weight: bold;">todo</div>
+<h3>todo</h3>
 
 - Not use Harmony patches. lmao.
 - Make mod look pretty and upload to Steam Workshop.
 - Force the trade/chest UI window to refresh on hotkey press.
 
 
-<div style="font-size: 24px; font-weight: bold;">Shoutouts</div>
+<h3>Shoutouts</h3>
 
 - Mistral-Large-Instruct-2407
 - Cline + VSCODE  
