@@ -19,6 +19,8 @@ Usually `%USERPROFILE%\AppData\LocalLow\Freehold Games\CavesOfQud\Mods`
 - Cursor gets stuck on the top bar of the trade window.  
 Just mouse over the screen. Usually a restart fixes this bug all together.
 
+---
+
 <h3>Other</h3>
 
 **This mod is pretty messy.**  
@@ -37,11 +39,15 @@ The modding documentation for implementing in-game hotkeys did not work for me (
 - Generate your `Mods.csproj` from the `Modding Toolkit` menu on the left of the title screen.
 - Place that into this repo.
 
+---
+
 <h3>todo</h3>
 
 - Not use Harmony patches. lmao.
 - Make mod look pretty and upload to Steam Workshop.
 - Force the trade/chest UI window to refresh on hotkey press.
+
+---
 
 <h3>Shoutouts</h3>
 
