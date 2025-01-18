@@ -1,7 +1,8 @@
 # WeightValueToggle
 
-A mod for Caves of Qud to toggle the display of weight or value in chests / trade windows using the F7 key.  
-You can also show both at the same time with F8, if you so desire.
+A mod for Caves of Qud to toggle the display of weight or value (along with some extra functionality).  
+F7 toggles between showing "weight" or "value".  
+F8 toggles between showing both "weight and value" and a ratio of "value/weight".
 
 --- 
 
